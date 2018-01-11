@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Animatie binnenvliegen</title>
+	<script type="text/javascript" src="main.js"></script>
+	<style type="text/css">
+		@keyframes test {
+			100% {
+				transform: translateX(-245px);
+			}
+
+			20% {
+				transform: translateX(20px);
+			}
+
+			0% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes testInverted {
+			0% {
+				transform: translateX(-245px);
+			}
+
+			80% {
+				transform: translateX(20px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+	</style>
+</head>
+<body>
+<input type="number" name="amount" placeholder="Amount of blocks" class="amountOfBlocksToG" value="1" min="1">
+<input type="submit" name="submitAmount" value="Generate" onclick="generateBlocks(document.querySelector('.amountOfBlocksToG').value)">
+<br>
+<button onclick="removeBlocks()">Remove all blocks</button>
+<br><br>
+<button onclick="animateBlocks()">Animate all blocks</button><span class="messageAnimate"></span>
+</body>
+</html>
